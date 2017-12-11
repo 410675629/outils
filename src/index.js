@@ -25,6 +25,8 @@ const throttle = require('./function/throttle')
 
 const getKeyName = require('./keycode/getKeyName')
 
+const getMousePos = require('./mouse/getMousePos')
+
 const deepClone = require('./object/deepClone')
 const isEmptyObject = require('./object/isEmptyObject')
 
@@ -72,6 +74,8 @@ module.exports = {
 
     getKeyName,
 
+    getMousePos,
+    
     deepClone,
     isEmptyObject,
 

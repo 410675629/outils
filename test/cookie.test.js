@@ -1,33 +1,33 @@
 describe('Cookie API:', function () {
     describe('#getCookie()', function () {
         before(function () {
-            outils.setCookie('test', 'getTestValue')
+            neteaseutils.setCookie('test', 'getTestValue')
         })
-        it(`outils.getCookie('test', 'getTestValue') should return true`, function () {
-            assert(outils.getCookie('test') === 'getTestValue')
+        it(`neteaseutils.getCookie('test', 'getTestValue') should return true`, function () {
+            assert(neteaseutils.getCookie('test') === 'getTestValue')
         })
         after(function () {
-            outils.removeCookie('test')
+            neteaseutils.removeCookie('test')
         })
     })
 
     describe('#removeCookie()', function () {
         before(function () {
-            outils.setCookie('test', 'removeTestValue')
+            neteaseutils.setCookie('test', 'removeTestValue')
         })
-        it(`outils.removeCookie('test') should return false`, function () {
-            outils.removeCookie('test')
-            assert.notEqual(outils.getCookie('test') === 'removeTestValue')
+        it(`neteaseutils.removeCookie('test') should return false`, function () {
+            neteaseutils.removeCookie('test')
+            assert.notEqual(neteaseutils.getCookie('test') === 'removeTestValue')
         })
     })
 
     describe('#setCookie()', function () {
-        it(`outils.getCookie('test', 'setCookie') should return true`, function () {
-            outils.setCookie('test', 'setCookie')
-            assert(outils.getCookie('test') === 'setCookie')
+        it(`neteaseutils.getCookie('test', 'setCookie') should return true`, function () {
+            neteaseutils.setCookie('test', 'setCookie')
+            assert(neteaseutils.getCookie('test') === 'setCookie')
         })
         after(function () {
-            outils.removeCookie('test')
+            neteaseutils.removeCookie('test')
         })
     })
 })

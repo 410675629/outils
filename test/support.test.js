@@ -1,7 +1,7 @@
 describe('Support API:', function () {
     describe('#isSupportWebP()', function () {
-        it(`outils.isSupportWebP() should return true`, function () {
-            assert(outils.isSupportWebP())
+        it(`neteaseutils.isSupportWebP() should return true`, function () {
+            assert(neteaseutils.isSupportWebP())
         });
     });
 })

@@ -1,15 +1,15 @@
 describe('Device API:', function () {
     describe('#getExplore()', function () {
-        it(`outils.getExplore() should return "Chrome"`, function () {
-            console.log(`Explore:${outils.getExplore()}`)
-            assert(/^Chrome:/.test(outils.getExplore()))
+        it(`neteaseutils.getExplore() should return "Chrome"`, function () {
+            console.log(`Explore:${neteaseutils.getExplore()}`)
+            assert(/^Chrome:/.test(neteaseutils.getExplore()))
         });
     });
 
     describe('#getOS()', function () {
-        it(`outils.getOS() should return "windows"`, function () {
-            console.log(`OS:${outils.getOS()}`)
-            assert(outils.getOS() === 'windows' || outils.getOS() === 'MacOSX' || outils.getOS() === 'linux')
+        it(`neteaseutils.getOS() should return "windows"`, function () {
+            console.log(`OS:${neteaseutils.getOS()}`)
+            assert(neteaseutils.getOS() === 'windows' || neteaseutils.getOS() === 'MacOSX' || neteaseutils.getOS() === 'linux')
         });
     });
 });

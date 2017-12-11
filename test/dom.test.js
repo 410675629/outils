@@ -5,13 +5,13 @@ describe('Dom API:', function () {
             length = 20;
         before(function () {
             $body.style.height = '10000px'
-            outils.setScrollTop(length)
+            neteaseutils.setScrollTop(length)
         })
-        it(`outils.getScrollTop() should return true`, function () {
-            assert(outils.getScrollTop() === length)
+        it(`neteaseutils.getScrollTop() should return true`, function () {
+            assert(neteaseutils.getScrollTop() === length)
         })
         after(function () {
-            outils.setScrollTop(0)
+            neteaseutils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -22,14 +22,14 @@ describe('Dom API:', function () {
             length = 20;
         before(function () {
             $body.style.height = '10000px'
-            outils.setScrollTop(length)
+            neteaseutils.setScrollTop(length)
         })
-        it(`outils.getScrollTop() should return true`, function () {
-            outils.setScrollTop(length)
-            assert(outils.getScrollTop() === length)
+        it(`neteaseutils.getScrollTop() should return true`, function () {
+            neteaseutils.setScrollTop(length)
+            assert(neteaseutils.getScrollTop() === length)
         })
         after(function () {
-            outils.setScrollTop(0)
+            neteaseutils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -45,8 +45,8 @@ describe('Dom API:', function () {
             document.body.appendChild(div)
             $ele = document.querySelector('#J_addClass')
         })
-        it(`outils.offset() should return true`, function () {
-            let offset = outils.offset($ele)
+        it(`neteaseutils.offset() should return true`, function () {
+            let offset = neteaseutils.offset($ele)
             assert(offset.left === 300 && offset.top === 200)
         })
         after(function () {
@@ -63,15 +63,15 @@ describe('Dom API:', function () {
         before(function () {
             $body.style.height = '10000px'
         })
-        it(`outils.scrollTo() should return true`, function (done) {
-            outils.scrollTo(y, duration)
+        it(`neteaseutils.scrollTo() should return true`, function (done) {
+            neteaseutils.scrollTo(y, duration)
             setTimeout(function () {
-                assert(outils.getScrollTop() === y)
+                assert(neteaseutils.getScrollTop() === y)
                 done()
             }, duration + 200)
         })
         after(function () {
-            outils.setScrollTop(0)
+            neteaseutils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -79,8 +79,8 @@ describe('Dom API:', function () {
 
     describe('#windowResize()', function () {
         let innerHeight = window.innerHeight
-        it(`outils.windowResize(downCb) should return true`, function (done) {
-            outils.windowResize(function () {
+        it(`neteaseutils.windowResize(downCb) should return true`, function (done) {
+            neteaseutils.windowResize(function () {
                 // 键盘缩回回调
                 assert(window.innerHeight == innerHeight)
                 done()
@@ -92,8 +92,8 @@ describe('Dom API:', function () {
 
     describe('#windowResize()', function () {
         let innerHeight = window.innerHeight
-        it(`outils.windowResize(upCb) should return true`, function (done) {
-            outils.windowResize(function () {}, function () {
+        it(`neteaseutils.windowResize(upCb) should return true`, function (done) {
+            neteaseutils.windowResize(function () {}, function () {
                 // 键盘弹起回调
                 assert(window.innerHeight === innerHeight - 200)
                 done()
